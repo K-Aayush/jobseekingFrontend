@@ -1,11 +1,11 @@
 import './App.css'
+import { useEffect, useContext } from "react";
+import { Context } from "./main";
 
 function App() {
-
-
   return (
     <>
-      <div>sup</div>
+      <div className=''>sup</div>
     </>
   )
 }
