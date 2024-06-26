@@ -16,10 +16,10 @@ import { Toaster } from "react-hot-toast";
 
 
 function App() {
-  const {isAuthorized, setIsAuthorized, setUser} = useContext(Context);
+  const { isAuthorized, setIsAuthorized, setUser } = useContext(Context);
 
   useEffect(() => {
-    
+
   }, [isAuthorized]);
 
 
