@@ -16,24 +16,24 @@ import { Toaster } from "react-hot-toast";
 
 
 function App() {
-  const {isAuthorized, setIsAuthorized, setUser} = useContext(Context);
+  const { isAuthorized, setIsAuthorized, setUser } = useContext(Context);
 
   useEffect(() => {
-    
+
   }, [isAuthorized]);
 
 
   return (
     <>
       <BrowserRouter>
-        <Header />
+        {/* <Header /> */}
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
         <Toaster />
       </BrowserRouter>
     </>
