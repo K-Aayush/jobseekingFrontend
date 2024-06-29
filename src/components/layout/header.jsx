@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Header = () => {
-  const { isAuthorized, setIsAuthorized, user } = useContext(Context);
+  const { isAuthorized, setIsAuthorized } = useContext(Context);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navigate = useNavigate();
