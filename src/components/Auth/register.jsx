@@ -148,8 +148,8 @@ const Register = () => {
         <img src={grayimage} className="border inset-0 w-full h-full object-cover rounded-xl" alt="Background" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
-            <h3 className="lg:text-3xl text-xl font-bold mb-4">Find Your Dream Job Today</h3>
-            <p className="lg:text-lg text-md mb-4">Forget the old rules. You can have the best people.
+            <h3 className="lg:text-3xl text-xl text-indigo-700 font-bold mb-4">Find Your Dream Job Today</h3>
+            <p className="lg:text-lg text-md font-semibold text-gray-500 mb-4">Forget the old rules. You can have the best people.
               Right now. Right here.</p>
           </div>
         </div>
