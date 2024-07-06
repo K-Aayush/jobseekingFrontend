@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import Cookies from "js-cookie"
 
 const Header = () => {
   const { isAuthorized, setIsAuthorized } = useContext(Context);
@@ -16,6 +17,8 @@ const Header = () => {
       const response = await axios.get("/base-url/user/logout", { withCredentials: true });
       toast.success(response.data.message);
       setIsAuthorized(false);
+      Cookies.remove("authToken");
+      Cookies.remove("role");
       navigate("/");
     }
     catch (error) {

@@ -1,31 +1,27 @@
-import './App.css'
+import "./App.css";
 import { useEffect, useContext } from "react";
 import { Context } from "./main";
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Login from "./components/Auth/Login";
-import Register from "./components/Auth/Register"
-import Header from "./components/layout/Header";
+import Login from "./components/Auth/login";
+import Register from "./components/Auth/register";
+import Header from "./components/layout/header";
 import Footer from "./components/layout/Footer";
 import Home from "./components/Home/Home";
 import HeroSection from "./components/Home/HeroSection";
-import NotFound from './components/NotFound/NotFound';
-import DisableLayout from './components/layout/DisableLayout';
+import NotFound from "./components/NotFound/NotFound";
+import DisableLayout from "./components/layout/DisableLayout";
+import ImageGallery from "./components/Image/Image";
+import EmployeerOnBoard from "./components/OnBoard/employeerOnBoard";
+import JobSeekerOnBoard from "./components/OnBoard/jobSeekerOnBoard";
 
 import axios from "axios";
 import { Toaster } from "react-hot-toast";
 
-
 function App() {
   const { isAuthorized } = useContext(Context);
 
-
-  useEffect(() => {
-
-
-  }, [isAuthorized]);
-
-
+  useEffect(() => {}, [isAuthorized]);
 
   return (
     <>
@@ -37,7 +33,10 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/" element={<Home />} />
+          <Route path="/employeerOnBoard" element={<EmployeerOnBoard />} />
+          <Route path="/jobSeekerOnBoard" element={<JobSeekerOnBoard />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/image" element={<ImageGallery />} />
         </Routes>
         <DisableLayout>
           <Footer />
@@ -45,7 +44,7 @@ function App() {
         <Toaster />
       </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
